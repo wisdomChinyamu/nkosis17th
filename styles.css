@@ -254,7 +254,7 @@ body {
 
 .back {
     transform: rotateY(180deg);
-    background: linear-gradient(to left, #e0e0e0, #ffffff 30%);
+    background: linear-gradient(to left, #e0e0e2, #ffffff 30%);
 }
 
 
@@ -270,4 +270,98 @@ body {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+        width: 95%;
+    }
+    
+    .txt-content {
+        width: 100%;
+        text-align: center;
+        line-height: 1.5em;
+    }
+    
+    .woapp {
+        width: 90%;
+        position: static;
+        margin-top: 2em;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    
+    .woa {
+        width: 90%;
+    }
+    
+    #opening-img-div {
+        width: 80%;
+        margin: 1em auto;
+    }
+    
+    .card {
+        width: 90%;
+        max-width: 400px;
+        top: 65em;
+    }
+    
+    .objects {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .objects:nth-child(1) { width: 100px; top: 75em; left: 1em; }
+    .objects:nth-child(2) { top: 15em; right: 1em; transform: scale(0.7) rotate(-30deg); }
+    .objects:nth-child(3) { top: 65em; right: 1em; transform: scale(0.7) rotate(12deg); }
+    .objects:nth-child(4) { top: 45em; left: 10em; transform: scale(0.7) rotate(-13deg); }
+    .objects:nth-child(5) { width: 100px; top: 25em; right: 10em; transform: scale(0.7) rotate(320deg); }
+    .objects:nth-child(6) { top: 0.5em; left: 1em; transform: scale(0.7) rotate(-25deg); }
+    
+    .bg-card, .me {
+        position: relative;
+        left: auto;
+        top: auto;
+        margin: 0 auto 1em auto;
+    }
+    
+    .woapp {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 90%;
+        margin: 2em auto;
+    }
+    
+    #headline {
+        font-size: 2rem;
+    }
+    
+    .headname {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .objects {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .objects:nth-child(1) { width: 70px; }
+    .objects:nth-child(5) { width: 70px; }
+    
+    .card {
+        width: 95%;
+        height: 350px;
+    }
+    
+    .front, .back {
+        font-size: 0.9rem;
+        padding: 0.5em;
+    }
 }

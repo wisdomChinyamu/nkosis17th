@@ -32,19 +32,38 @@
         <img src="media/cute-brown-heart-free-png.webp" alt="" width="100%">
     </div>
 
-    <audio id="audioplayer" src="media/LAV8 - Redbone.mp3" autoplay loop preload="auto" controls></audio>
+    <audio id="audioPlayer" src="media/LAV8 - Redbone.mp3" loop preload="auto" controls style="display: none;"></audio>
 
     <script>
         let audio = document.getElementById('audioPlayer');
 
-        // Allow audio to autoplay after a click or scroll event
+        // Play audio when page loads (with user gesture requirement)
+        function attemptPlayAudio() {
+            if(audio.paused) {
+                audio.play().then(function() {
+                    console.log("Audio playing automatically");
+                }).catch(function(error) {
+                    console.log("Auto-play prevented by browser: ", error);
+                    console.log("Audio will play on user interaction");
+                });
+            }
+        }
+        
+        // Try to play immediately
+        attemptPlayAudio();
+
+        // Ensure audio plays after any user interaction
+        document.body.addEventListener('touchstart', function() {
+            attemptPlayAudio();
+        }, {once: true});
+
         document.body.addEventListener('click', function() {
-            audio.play();
-        });
+            attemptPlayAudio();
+        }, {once: true});
 
         document.body.addEventListener('scroll', function() {
-            audio.play();
-        });
+            attemptPlayAudio();
+        }, {once: true});
     </script>
 
     <!-- top section -->
@@ -109,7 +128,7 @@
                         <br><br>
                         Do you know that you are like that diamond ring? That we are all diamond rings? 
                         However, do you treat yourself and those around you like a plastic kinderjoy 
-                        ring or like a diamond rings? Remember to always handle yourself and others, even
+                        ring or like a diamond rings? Remember to always handle yourself and those around you, even
                         when you or they don't believe in their value, like the diamond rings we are. 
                         <br><br>
                         <strong>PS</strong>, boys are dangerous!!!
