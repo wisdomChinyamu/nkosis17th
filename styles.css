@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+.source-serif-4-fonts {
+  font-family: "Source Serif 4", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.objects {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+}
+
+.objects:nth-child(1) {
+    width: 200px;
+    top: 85em;
+    left: 5em;
+}
+
+.objects:nth-child(2) {
+    top: 20em;
+    right: 0;
+    left: auto;
+    transform: rotate(-30deg);
+}
+
+.objects:nth-child(3) {
+    top: 70em;
+    left: auto;
+    right: 6em;
+    transform: rotate(12deg);
+}
+
+.objects:nth-child(4) {
+    top: 50em;
+    left: 30em;
+    transform: rotate(-13deg);
+}
+
+.objects:nth-child(5) {
+    width: 150px;
+    top: 28em;
+    left: auto;
+    right: 50em;
+    transform: rotate(320deg);
+}
+
+.objects:nth-child(6) {
+    top: 1em;
+    left: 4em;
+    transform: rotate(-25deg);
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Source Serif 4", serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+#headline {
+    font-size: 2.8rem;
+    font-weight: bold;
+    font-family: georgia;
+}
+
+#opening-img-div {
+    height: 90%;
+    width: 35%;
+    margin-left: auto;
+    box-shadow: 4px 3px rgb(110, 60, 26);
+}
+
+#audioplayer {
+    position: absolute;
+    left: auto;
+    right: 0;
+    top: 0;
+    /* transform: rotate(-180deg);  */
+}
+
+#opening-img {
+    height: 80%;
+    width: 80%;
+    border-radius: 5%;
+    background-image: url(media/nkosi.lowole-20240606-0001.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 5px 5px 10px rgba(110, 60, 26, 0.836);
+}
+
+.headname {
+    font-size: 6rem;
+    font-weight: 900;
+    letter-spacing: 2pt;
+    font-family: Georgia;
+}
+
+.hidden:nth-child(3) {
+    transition: 800ms;
+}
+
+.accents {
+    color: rgb(110, 60, 26);
+}
+
+.content {
+    margin: 3em auto 5em auto;
+    width: 85%;
+    display: flex;
+    overflow: hidden;
+    justify-content: space-evenly;
+    line-break: 0.5em;
+}
+
+.txt-content {
+    width: 45%;
+    padding: 15pt;
+    display: inline;
+    align-self: center;
+    line-height: 7em;
+}
+
+.heading {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bolder;
+    padding: 0.5em;
+}
+
+.woa {
+    margin: 0 auto;
+    width: 47%;
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.bg-card {
+    background-color: rgba(110, 60, 26, 0.781);
+    border-radius: 8px;
+    height: 280px;
+    width: 235px;
+    top: 35em;
+    bottom: auto;
+    right: auto;
+    left: 9.5em;
+    position: absolute;
+}
+
+.me {
+    border-radius: 10px;
+    height: 278px;
+    width: 230px;
+    top: 36em;
+    bottom: auto;
+    right: auto;
+    left: 10.5em;
+    position: absolute;
+    background-image: url(media/20240714_192532~2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 230px;
+    overflow: hidden;
+}
+
+.woapp {
+    width: 50%;
+    position: absolute;
+    top: 35em;
+    bottom: auto;
+    right: auto;
+    left: 30em;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+
+/* advice card */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+body {
+    background-color: rgba(255, 228, 196, 0.493);
+}
+
+
+.card {
+    width:650px;
+    height: 450px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 73em;
+    bottom: 0;
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
+    transition: 1s;
+}
+
+.card:hover {
+    transform: rotate(-5deg);
+}
+
+.card:hover .outside{
+    transform: rotateY(-130deg);
+}
+
+.outside, .inside {
+    left: 50.1%;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+}
+
+.inside {
+    left: 50%;
+    background: linear-gradient(to right, #e7e7e7, #ffffff 30%);
+    padding: 25px;
+    padding-bottom: 0;
+    line-height: 1.2;
+}
+
+.outside {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    z-index: 1;
+    transform-origin: left;
+    transition: 2s;
+    cursor: pointer;
+}
+
+.front, .back {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: rotateX(0deg);
+    background-color: rgb(116, 70, 40);
+    color: rgba(255, 228, 196);
+}
+
+.back {
+    transform: rotateY(180deg);
+    background: linear-gradient(to left, #e0e0e0, #ffffff 30%);
+}
+
+
+/* animations */
+.hidden {
+    opacity: 0;
+    transition: all 1.5s ease;
+    transform: translateX(-100%);
+    filter: blur(5px);
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
